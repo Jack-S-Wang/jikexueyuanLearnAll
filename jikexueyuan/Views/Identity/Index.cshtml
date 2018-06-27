@@ -1,8 +1,16 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Index";
 }
-
-<table class="table-bordered" style="width:80%;">
+@using (Html.BeginForm())
+{
+    <p>
+        EmailList: @Html.DropDownList("seachEmail", "None")
+        Name: @Html.TextBox("seachName")<br />
+        <input type="submit" value="seach" />
+    </p>
+}
+<table class="table" style="width:80%;">
     <tr>
         <th>
             Id
@@ -16,7 +24,7 @@
         <th></th>
     </tr>
 
-    @if (Model == null || Model.Count() == 0)
+    @if (Model == null)
     {
         <tr>
             <td colspan="4" class="text-center">暂无数据</td>
@@ -26,21 +34,21 @@
     {
         foreach (jikexueyuan.Models.AppUser user in Model)
         {
-            < tr >
-                < th >
-    @user.Id
-                </ th >
-                < th >
-    @user.UserName
-                </ th >
-                < th >
-    @user.Email
-                </ th >
-            </ tr >
+            <tr>
+                <th>
+                    @user.Id
+                </th>
+                <th>
+                    @user.UserName
+                </th>
+                <th>
+                    @user.Email
+                </th>
+            </tr>
         }
     }
 </table>
 <p>
-    @Html.ActionLink("创建新账户", "Creat");
+    @Html.ActionLink("创建新账户", "Creat")
 </p>
 

@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,14 +12,30 @@ using System.Web.Mvc;
 
 namespace jikexueyuan.Controllers
 {
-    
+
     public class IdentityController : Controller
     {
         // GET: Identity
-        [Route("Index")]
-        public ActionResult Index()
+        public ActionResult Index(string seachEmail, string searchName)
         {
-            return View();
+            var emailList = new List<string>();
+            var el = from u in manageUser.Users
+                     select u.Email;
+            emailList.AddRange(el.Distinct());
+            ViewBag.seachEmail = new SelectList(emailList);
+            var user = from m in manageUser.Users
+                       select m;
+            if (!String.IsNullOrEmpty(seachEmail))
+            {
+                user = user.Where(s => s.Email == seachEmail);
+            }
+            if (!String.IsNullOrEmpty(searchName))
+            {
+                user = user.Where(s => s.UserName.Contains(searchName));
+            }
+            //可以获取web.config文件里的内容
+            //var a = ConfigurationManager.AppSettings["ClientValidationEnabled"];
+            return View(user);
         }
         public ActionResult Creat()
         {
@@ -33,13 +50,17 @@ namespace jikexueyuan.Controllers
                 var user = new AppUser
                 {
                     UserName = model.Name,
-                    Email = model.Email,
                 };
                 IdentityResult result = await manageUser.CreateAsync(user, model.password);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    result = await manageUser.CreateAsync(user, model.Email);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index");
+                    }
                 }
+                
                 AddErrorsFormResult(result);
             }
             return View(model);
@@ -54,10 +75,16 @@ namespace jikexueyuan.Controllers
 
         private void AddErrorsFormResult(IdentityResult result)
         {
-            foreach(string error in result.Errors)
+            foreach (string error in result.Errors)
             {
                 ModelState.AddModelError("", error);
             }
+        }
+
+        public string welcome(string name)
+        {
+            return HttpUtility.HtmlEncode(name);//这个防止黑客的参数攻击
+            //也可写成server.HtmlEncode(name)
         }
     }
 }

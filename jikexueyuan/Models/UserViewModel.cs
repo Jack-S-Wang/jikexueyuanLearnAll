@@ -11,6 +11,8 @@ namespace jikexueyuan.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [DataType(DataType.EmailAddress)]
+
         public string Email { get; set; }
         [Required]
         public string password { get; set; }

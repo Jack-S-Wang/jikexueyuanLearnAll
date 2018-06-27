@@ -1,7 +1,23 @@
-﻿
+﻿@model jikexueyuan.Models.UserViewModel
 @{
     ViewBag.Title = "Creat";
 }
-
+@Html.ValidationSummary(false)
+@using (Html.BeginForm())
+{
+    <div>
+        <label>用户名</label>
+        @Html.TextBoxFor(model=>model.Name,new { @class="form-contorl"})
+    </div>
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(model=>model.Email, new { @class="form-contorl"})
+    </div>
+    <div>
+        <lable>密码</lable>
+        @Html.TextBoxFor(model=>model.password,new { @class="form-contorl"})
+    </div>
+    <input type="submit" value="确认创建"/>
+}
 
 
