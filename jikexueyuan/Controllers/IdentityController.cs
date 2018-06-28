@@ -4,7 +4,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -15,6 +14,17 @@ namespace jikexueyuan.Controllers
 
     public class IdentityController : Controller
     {
+        public ActionResult AutoComplete(string term)
+        {
+            var model = manageUser.Users.Where
+                (s => s.UserName.StartsWith(term)).Take(10)
+                .Select(m => new
+                { label = m.UserName });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+        
+
+
         // GET: Identity
         public ActionResult Index(string seachEmail, string searchName)
         {
@@ -25,13 +35,18 @@ namespace jikexueyuan.Controllers
             ViewBag.seachEmail = new SelectList(emailList);
             var user = from m in manageUser.Users
                        select m;
-            if (!String.IsNullOrEmpty(seachEmail))
+            if (Request.IsAjaxRequest())
             {
-                user = user.Where(s => s.Email == seachEmail);
-            }
-            if (!String.IsNullOrEmpty(searchName))
-            {
-                user = user.Where(s => s.UserName.Contains(searchName));
+                if (seachEmail != null)
+                {
+                    user = user.Where(s => s.Email == seachEmail);
+                }
+                if (!String.IsNullOrEmpty(searchName))
+                {
+                    user = user.Where(s => s.UserName.Contains(searchName));
+                }
+
+                return PartialView("_partialUser", user);
             }
             //可以获取web.config文件里的内容
             //var a = ConfigurationManager.AppSettings["ClientValidationEnabled"];
@@ -50,17 +65,14 @@ namespace jikexueyuan.Controllers
                 var user = new AppUser
                 {
                     UserName = model.Name,
+                    Email = model.Email
                 };
                 IdentityResult result = await manageUser.CreateAsync(user, model.password);
                 if (result.Succeeded)
                 {
-                    result = await manageUser.CreateAsync(user, model.Email);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Index");
-                    }
+                    return RedirectToAction("Index");
                 }
-                
+
                 AddErrorsFormResult(result);
             }
             return View(model);

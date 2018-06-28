@@ -1,16 +1,46 @@
-﻿
+﻿@model IEnumerable<jikexueyuan.Models.AppUser>
 @{
     ViewBag.Title = "Index";
 }
-@using (Html.BeginForm())
+@*@using (Html.BeginForm())
 {
     <p>
-        EmailList: @Html.DropDownList("seachEmail", "None")
-        Name: @Html.TextBox("seachName")<br />
+        EmailList: @Html.DropDownList("searchEmail", "None")
+        Name: @Html.TextBox("searchName")<br />
         <input type="submit" value="seach" />
     </p>
-}
-<table class="table" style="width:80%;">
+}*@
+@*
+异步执行ajax操作    
+*@
+
+@*@using (Ajax.BeginForm(
+        new AjaxOptions
+        {
+            HttpMethod = "Get",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "partialUser"
+        }))
+    {
+        <input type="search" name="searchName" />
+        <input type="submit" value="search" />
+    }*@
+@*
+自写异步ajax请求    
+*@
+<form method="get" action="@Url.Action("Index")" data-movies-ajax="true" data-movies-targetId="#partialUser">
+    @*<input type="search" name="searchName" />*@
+    
+    <input type="search" name="searchName" 
+           data-movies-autocomplete="@Url.Action("AutoComplete")" />
+    <input type="submit" value="search" />
+</form>
+
+
+
+
+@Html.Partial("_partialUser",Model)
+@*<table class="table" style="width:80%;">
     <tr>
         <th>
             Id
@@ -45,9 +75,9 @@
                     @user.Email
                 </th>
             </tr>
+            }
         }
-    }
-</table>
+</table>*@
 <p>
     @Html.ActionLink("创建新账户", "Creat")
 </p>
