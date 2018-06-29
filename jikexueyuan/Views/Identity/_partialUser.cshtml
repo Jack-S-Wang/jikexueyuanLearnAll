@@ -1,4 +1,12 @@
-﻿<div id="partialUser">
+﻿@model IPagedList<AppUser>
+
+<div id="partialUser">
+    <div class="pagedList" data-movies-targetId="#partialUser">
+        @Html.PagedListPager(Model,
+        page => Url.Action("Index", new { page }),
+        PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+
     <table class="table" style="width:80%;">
         <tr>
             <th>
@@ -21,7 +29,7 @@
         }
         else
         {
-            foreach (jikexueyuan.Models.AppUser user in Model)
+            foreach (AppUser user in Model)
             {
                 <tr>
                     <th>

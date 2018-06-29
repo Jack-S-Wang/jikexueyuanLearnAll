@@ -31,7 +31,21 @@ $(function () {
         ipt.autocomplete(options);
     };
 
+    var getPage = function () {
+        var $a = $(this);
+        var options = {
+            url: $a.attr("href"),
+            data: $("form").serialize(),
+            type:"get"
+        };
+        $.ajax(options).done(function (data) {
+            var target = $a.parents("div.pagedList").attr("data-movies-targetId");
+            $(target).replaceWith(data);
+        });
+        return false;
+    };
+
     $("form[data-movies-ajax='true']").submit(ajaxform);
     $("input[data-movies-autocomplete]").each(creatAutoComplete);
-
+    $(".body-content").on("click", ".pagedList a", getPage);
 });

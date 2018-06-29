@@ -35,6 +35,8 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bi
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Newtonsoft.Json.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Owin.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\PagedList.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\PagedList.Mvc.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Helpers.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Mvc.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Razor.dll
@@ -58,6 +60,8 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bi
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Newtonsoft.Json.xml
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\PagedList.xml
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\PagedList.Mvc.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Razor.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Webpages.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\System.Web.Webpages.Deployment.xml
@@ -72,3 +76,4 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bi
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\zh-Hans\System.Web.Mvc.resources.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.csprojResolveAssemblyReference.cache

@@ -1,7 +1,10 @@
-﻿@model IEnumerable<jikexueyuan.Models.AppUser>
+﻿@*@model IEnumerable<jikexueyuan.Models.AppUser>*@
+@model IPagedList<AppUser>
 @{
     ViewBag.Title = "Index";
 }
+
+
 @*@using (Html.BeginForm())
 {
     <p>
@@ -28,6 +31,7 @@
 @*
 自写异步ajax请求    
 *@
+@Html.AntiForgeryToken();
 <form method="get" action="@Url.Action("Index")" data-movies-ajax="true" data-movies-targetId="#partialUser">
     @*<input type="search" name="searchName" />*@
     
@@ -35,9 +39,16 @@
            data-movies-autocomplete="@Url.Action("AutoComplete")" />
     <input type="submit" value="search" />
 </form>
-
-
-
+@{ 
+    var count = 10.01m;
+    var date = DateTime.Now;
+}
+<div>
+    @count.ToString("c")
+</div>
+<div>
+    @date.ToShortDateString()
+</div>
 
 @Html.Partial("_partialUser",Model)
 @*<table class="table" style="width:80%;">
