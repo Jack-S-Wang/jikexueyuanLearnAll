@@ -249,6 +249,8 @@
     </Compile>
     <Compile Include="Infrastructure\AppIdentityDBContext.cs" />
     <Compile Include="Infrastructure\AppManageUser.cs" />
+    <Compile Include="Infrastructure\CustomPasswordValidator.cs" />
+    <Compile Include="Infrastructure\CustomUserValidator.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -267,6 +269,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Identity\_partialUser.cshtml" />
     <Content Include="scripts\jquery-1.12.4.min.map" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Identity\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

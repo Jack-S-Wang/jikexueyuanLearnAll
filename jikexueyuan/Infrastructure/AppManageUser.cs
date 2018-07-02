@@ -18,7 +18,7 @@ namespace jikexueyuan.Infrastructure
 
         }
 
-        public static AppManageUser Creat(
+        public static AppManageUser Create(
             IdentityFactoryOptions<AppManageUser> options,
                 IOwinContext context)
         {
@@ -29,6 +29,19 @@ namespace jikexueyuan.Infrastructure
             //也就是说UserStore<T>类中的方法（注入：FindById,FindByNameAsnc...)
             //通过EntityFramework检索和持久化UserInfo到数据库中
             var manager = new AppManageUser(new UserStore<AppUser>(db));
+            manager.PasswordValidator = new CustomPasswordValidator
+            {
+                RequiredLength = 6,
+                RequireDigit = false,
+                RequireLowercase=false,
+                RequireUppercase=false,
+                RequireNonLetterOrDigit=false
+            };
+            manager.UserValidator = new CustomUserValidator(manager)
+            {
+                AllowOnlyAlphanumericUserNames=true,
+                RequireUniqueEmail=true
+            };
             return manager;
         }
     }

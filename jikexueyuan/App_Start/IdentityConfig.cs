@@ -21,7 +21,7 @@ namespace jikexueyuan.App_Start
             //和AppManageUser的实例注册到OwinContext中，这样确保每一次请求都能获取到
             //相关ASP.NET Identity对象，而且还能保证全局唯一。
             app.CreatePerOwinContext(AppIdentityDBContext.Create);
-            app.CreatePerOwinContext<AppManageUser>(AppManageUser.Creat);
+            app.CreatePerOwinContext<AppManageUser>(AppManageUser.Create);
             //UserCookieAuthentication方法指定了身份验证类型为ApplicationCookie,同时指定
             //LoginPath属性，当Http请求内容认证不通过时重定向到指定的URL
             app.UseCookieAuthentication(new CookieAuthenticationOptions
@@ -40,7 +40,7 @@ namespace jikexueyuan.App_Start
             //和AppManageUser的实例注册到OwinContext中，这样确保每一次请求都能获取到
             //相关ASP.NET Identity对象，而且还能保证全局唯一。
             app.CreatePerOwinContext(AppIdentityDBContext.Create);
-            app.CreatePerOwinContext<AppManageUser>(AppManageUser.Creat);
+            app.CreatePerOwinContext<AppManageUser>(AppManageUser.Create);
             //UserCookieAuthentication方法指定了身份验证类型为ApplicationCookie,同时指定
             //LoginPath属性，当Http请求内容认证不通过时重定向到指定的URL
             app.UseCookieAuthentication(new CookieAuthenticationOptions

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+<h2>Error</h2>
+<div>
+    <table>
+        <tr>Error:</tr>
+        @foreach(string error in Model)
+        {
+            <tr>
+                @error;
+            </tr>
+        }
+    </table>
+</div>

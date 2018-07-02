@@ -41,6 +41,12 @@
                     <th>
                         @user.Email
                     </th>
+                    <th>
+                        @Html.ActionLink("编辑", "Edit",new { id=@user.Id});
+                    </th>
+                    <th>
+                        @Html.ActionLink("删除", "Delete",new { id=@user.Id});
+                    </th>
                 </tr>
             }
         }

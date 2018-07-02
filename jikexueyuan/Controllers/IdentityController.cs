@@ -12,7 +12,7 @@ using PagedList;
 
 namespace jikexueyuan.Controllers
 {
-    [Authorize(Roles ="admin")]//设置所有的请求网页都得认证登入才可以加载
+    //[Authorize(Roles ="admin")]//设置所有的请求网页都得认证登入才可以加载
     
     public class IdentityController : Controller
     {
@@ -35,6 +35,7 @@ namespace jikexueyuan.Controllers
         // GET: Identity
         public ActionResult Index(string seachEmail, string searchName,int page=1)
         {
+            //throw new Exception("winfows is Erro");
             var emailList = new List<string>();
             var el = from u in manageUser.Users
                      select u.Email;
@@ -112,6 +113,73 @@ namespace jikexueyuan.Controllers
         public ActionResult Login()
         {
             return View();
+        }
+
+        public async Task<ActionResult> Delete(string id)
+        {
+            AppUser user = await manageUser.FindByIdAsync(id);
+            if (user != null)
+            {
+                IdentityResult result = await manageUser.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("index");
+                }
+                return View("Error", result.Errors);
+            }
+            return View("Error",new[] { "无法找到该用户"});
+        }
+
+        public async Task<ActionResult> Edit(string id)
+        {
+            AppUser user = await manageUser.FindByIdAsync(id);
+            if (user != null)
+            {
+                return View(user);
+            }
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public async Task<ActionResult> Edit(string id,string email,string password)
+        {
+            AppUser user = await manageUser.FindByIdAsync(id);
+            if (user != null)
+            {
+                IdentityResult resultPaw=null;
+                if (password != string.Empty)
+                {
+                    //验证密码是否满足要求
+                    resultPaw = await manageUser.PasswordValidator.ValidateAsync(password);
+                    if (resultPaw.Succeeded)
+                    {
+                        //修改密码
+                        user.PasswordHash = manageUser.PasswordHasher.HashPassword(password);
+                    }else
+                    {
+                        AddErrorsFormResult(resultPaw);
+                    }
+                }
+                user.Email = email;
+                //验证Email是否满足要求
+                IdentityResult resultEma = await manageUser.UserValidator.ValidateAsync(user);
+                if (!resultEma.Succeeded)
+                {
+                    AddErrorsFormResult(resultEma);
+                }
+                if((resultEma.Succeeded && resultPaw==null) || (resultPaw.Succeeded && resultEma.Succeeded))
+                {
+                    IdentityResult result = await manageUser.UpdateAsync(user);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    AddErrorsFormResult(result);
+                }
+            }else
+            {
+                ModelState.AddModelError("", "未找到该对象");
+            }
+            return View(user);
         }
     }
 }
