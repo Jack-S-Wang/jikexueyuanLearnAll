@@ -34,7 +34,6 @@
 @Html.AntiForgeryToken();
 <form method="get" action="@Url.Action("Index")" data-movies-ajax="true" data-movies-targetId="#partialUser">
     @*<input type="search" name="searchName" />*@
-    
     <input type="search" name="searchName" 
            data-movies-autocomplete="@Url.Action("AutoComplete")" />
     <input type="submit" value="search" />

@@ -1,5 +1,4 @@
-﻿
-$(function () {
+﻿$(function () {
     var ajaxform = function () {
         var aform = $(this);
 
@@ -28,6 +27,7 @@ $(function () {
             select:submitAutoComp,
             source:ipt.attr("data-movies-autocomplete")
         };
+        debugger;
         ipt.autocomplete(options);
     };
 

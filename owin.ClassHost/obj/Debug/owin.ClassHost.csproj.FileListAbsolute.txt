@@ -1,0 +1,8 @@
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\bin\owin.ClassHost.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\bin\owin.ClassHost.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\bin\Microsoft.Owin.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\bin\Owin.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\bin\Microsoft.Owin.xml
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\obj\Debug\owin.ClassHost.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\obj\Debug\owin.ClassHost.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.ClassHost\obj\Debug\owin.ClassHost.csprojResolveAssemblyReference.cache
