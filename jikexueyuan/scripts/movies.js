@@ -25,10 +25,10 @@
         var ipt = $(this);
         var options = {
             select:submitAutoComp,
-            source:ipt.attr("data-movies-autocomplete")
+            source: ipt.attr("data-movies-autocomplete")
         };
-        debugger;
         ipt.autocomplete(options);
+        $(".ui-menu").css("backgroud-color", "yellow");
     };
 
     var getPage = function () {
@@ -44,8 +44,10 @@
         });
         return false;
     };
-
     $("form[data-movies-ajax='true']").submit(ajaxform);
     $("input[data-movies-autocomplete]").each(creatAutoComplete);
     $(".body-content").on("click", ".pagedList a", getPage);
+    $(document).ready(function () {
+        alert("加载完毕");
+    });
 });

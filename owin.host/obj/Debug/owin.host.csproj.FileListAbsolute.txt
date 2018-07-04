@@ -10,6 +10,6 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\bin\
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\bin\Debug\Microsoft.Owin.Diagnostics.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\bin\Debug\Microsoft.Owin.Hosting.xml
-C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\obj\Debug\owin.host.csprojResolveAssemblyReference.cache
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\obj\Debug\owin.host.exe
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\obj\Debug\owin.host.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\owin.host\obj\Debug\owin.host.csprojResolveAssemblyReference.cache
