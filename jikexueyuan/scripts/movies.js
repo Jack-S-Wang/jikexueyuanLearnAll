@@ -70,7 +70,7 @@ $(function () {
 
 
         //$.ajaxSetup所传入的数使后续的ajax请求不进行明确指定将按这个参数的方式进行请求
-       
+
     };
 
     //进行判断，如果成功则输出success失败则输出error
@@ -180,24 +180,77 @@ $(function () {
     })
     $(window).load(function () {
         imgLocation();
-                
+        //$(window).scroll(function () {
+        //    var img = { "data": [{ "src": "/Resources/baby.jpg" }, { "src": "/Resources/baby2.jpg" }, { "src": "/Resources/bear.jpg" }, { "src": "/Resources/BEER.png" }, { "src": "/Resources/building.jpg" }] };
+        //    if (scrollSide()) {
+        //        $.each(img.data, function (index, value) {
+        //            var box = $("<div>").addClass("box").appendTo("#cont");
+        //            var content = $("<div>").addClass("content").appendTo(box);
+        //            var imgb = $("<img>").attr("src", $(value).attr("src")).appendTo(content);
+        //            console.log(imgb.attr("src"));
+        //        });
+        //    }
+        //    imgLocation();
+        //});
     });
     $(window).resize(function () {
         imgLocation();
     });
-    $(window).scroll(function () {
-        var img = { "data": [{ "src": "/Resources/baby.jpg" }, { "src": "/Resources/baby2.jpg" }, { "src": "/Resources/bear.jpg" }, { "src": "/Resources/BEER.png" }, { "src": "/Resources/building.jpg" }] };
-        if (scrollSide()) {
-            $.each(img.data, function (index, value) {
-                var box = $("<div>").addClass("box").appendTo("#cont");
-                var content = $("<div>").addClass("content").appendTo(box);
-                var imgb=$("<img>").attr("src", $(value).attr("src")).appendTo(content);
-                console.log(imgb.attr("src"));
-            });
-        }
-        imgLocation();
+
+
+    $(".main>a").click(function () {
+        var ulNode = $(this).next("ul");
+        //if (ulNode.css("display") == "none") {
+        //    ulNode.css("display", "block");
+        //} else {
+        //    ulNode.css("display", "none");
+        //}
+        //ulNode.toggle(1000);//数字，slow,normal,fast
+        ulNode.slideToggle(1000);
+    })
+
+    //横向菜单鼠标停留在上面进行显示
+    $(".hmain").hover(function () {
+        var ulNode = $(this).children("ul");
+        ulNode.slideDown(500);
+    }, function () {
+        $(this).children("ul").slideUp();
     });
-});
+    var timeoutid;
+    $(".tabin-ul li").each(function (index) {
+        var liNode = $(this);
+        liNode.mouseover(function () {
+            timeoutid = setTimeout(function () {
+                $("div.tabin-div").removeClass("tabin-div");
+                $(".tabin-ul li.tabin").removeClass("tabin");
+                $(".contentfirst").eq(index).addClass("tabin-div");
+                liNode.addClass("tabin");
+            }, 300);
+        }).mouseout(function () {
+            clearTimeout(timeoutid);
+        })
+    });
+    
+    //$("#realcontent").load("/Identity/Login");
+    $("#tabsecond li").each(function (index) {
+        $(this).click(function () {
+            $("#tabsecond li.tabin").removeClass("tabin");
+            $(this).addClass("tabin");
+            //if (index == 0) {
+            //    $("#realcontent").load("/Identity/Login");
+            //} else if (index == 1) {
+            //    $("#realcontent").load("/Identity/Creat");
+            //} else if (index == 2) {
+            //    $("#realcontent").load("/Identity/Login");
+            //}
+        });
+    });
+
+
+
+
+
+})
 
 function scrollSide() {
     var box = $(".box");
@@ -214,24 +267,24 @@ function scrollSide() {
 function imgLocation() {
     var box = $(".box");
     var boxWidth = box.eq(0).width();
-    var allWidth=$(window).width();
+    var allWidth = $(window).width();
     var num = Math.floor(allWidth / boxWidth);
     //console.log(num);
     var boxArr = [];
     box.each(function (index, value) {
-       // console.log(index + "---" + value);
+        // console.log(index + "---" + value);
         var boxHeight = box.eq(index).height();
         if (index < num) {
             boxArr[index] = boxHeight;
             var left = 0;
             if (index > 0) {
-                left = box.eq(index-1).position().left+boxWidth;
+                left = box.eq(index - 1).position().left + boxWidth;
             }
             $(value).css({
                 "position": "absolute",
                 "top": 0,
-                "left":left
-                });
+                "left": left
+            });
             //console.log(boxHeight);
         } else {
             var minboxHeight = Math.min.apply(null, boxArr);

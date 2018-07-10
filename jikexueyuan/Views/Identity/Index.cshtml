@@ -4,6 +4,87 @@
     ViewBag.Title = "Index";
 }
 
+<div>
+    <ul>
+        <li class="main">
+            <a href="#">菜单1</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+        <li class="main">
+            <a href="#">菜单2</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+        <li class="main">
+            <a href="#">菜单3</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <br /><br />
+    <ul>
+        <li class="hmain">
+            <a href="#">菜单1</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+        <li class="hmain">
+            <a href="#">菜单2</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+        <li class="hmain">
+            <a href="#">菜单3</a>
+            <ul>
+                <li><a href="#">子菜单1</a></li>
+                <li><a href="#">子菜单2</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<br /><br /><br /><br /><br /><br />
+
+
+<div>
+    <ul class="tabin-ul">
+        <li class="tabin">标签1</li>
+        <li>标签2</li>
+        <li>标签3</li>
+    </ul>
+    <div class="contentfirst tabin-div">
+        内容1
+    </div>
+    <div class="contentfirst">
+        内容2
+    </div>
+    <div class="contentfirst">
+        内容3
+    </div>
+</div>
+<br /><br /><br /><br /><br />
+<div>
+    <ul id="tabsecond">
+        <li class="tabin">装载完整页面</li>
+        <li>装载部分页面</li>
+        <li>装载网络数据</li>
+    </ul>
+    <div id="contentsecond">
+        <div id="realcontent"></div>
+    </div>
+</div>
 
 @*@using (Html.BeginForm())
     {
@@ -31,7 +112,7 @@
 @*
     自写异步ajax请求
 *@
-@Html.AntiForgeryToken();
+@Html.AntiForgeryToken()
 <form method="get" action="@Url.Action("Index")" data-movies-ajax="true" data-movies-targetId="#partialUser">
     @*<input type="search" name="searchName" />*@
     <input type="search" name="searchName"
@@ -138,7 +219,7 @@
             }
     </table>*@
 <p>
-    @Html.ActionLink("创建新账户", "Creat") | 
+    @Html.ActionLink("创建新账户", "Creat") |
     @Html.ActionLink("图片", "ImageShow")
 </p>
 
