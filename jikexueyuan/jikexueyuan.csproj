@@ -220,6 +220,22 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <None Include="Resources\baby.jpg" />
+    <None Include="Resources\baby2.jpg" />
+    <None Include="Resources\bear.jpg" />
+    <None Include="Resources\BEER.png" />
+    <None Include="Resources\building.jpg" />
+    <None Include="Resources\girl.jpg" />
+    <None Include="Resources\monster.jpg" />
+    <None Include="Resources\rabbit.jpg" />
+    <None Include="Resources\rabbit2.jpg" />
+    <None Include="Resources\sd.jpg" />
+    <None Include="Resources\sky.jpg" />
+    <None Include="Resources\sky2.jpg" />
+    <None Include="Resources\smile.jpg" />
+    <None Include="Resources\snake.jpg" />
+    <None Include="Resources\student.jpg" />
+    <None Include="Resources\企鹅.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -255,6 +271,11 @@
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -273,6 +294,7 @@
     <Content Include="scripts\jquery-1.12.4.min.map" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Identity\Edit.cshtml" />
+    <Content Include="Views\Identity\ImageShow.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -285,6 +307,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -181,5 +181,10 @@ namespace jikexueyuan.Controllers
             }
             return View(user);
         }
+
+        public ActionResult ImageShow()
+        {
+            return View();
+        }
     }
 }

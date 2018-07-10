@@ -1,12 +1,11 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+body{
+    width:100%;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    /*padding-left: 15px;
+    padding-right: 15px;*/
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -15,4 +14,38 @@ select,
 textarea {
     max-width: 280px;
 }
+.ui-menu{
+    z-index:1003;
+    border:1px solid #808080 !important;
+    background-color:white;
+    width:145px;
+}
+.ui-helper-hidden-accessible{
+    display:none;
+}
+/*p{
+    background:#234164;
+    float:left;
+    border:1px solid #526356;
+    width:50px;
+    height:50px;
+}*/
 
+*{
+    margin:0px;
+    padding:0px;
+}
+.box{
+    position:relative;
+    float:left;
+}
+.content{
+    padding:10px;
+    border:1px solid #ccc;
+    box-shadow:0 0 5px #ccc;
+    border-radius:5px;
+}
+.content img{
+    width:190px;
+    height:auto;
+}

@@ -6,15 +6,15 @@
 
 
 @*@using (Html.BeginForm())
-{
-    <p>
-        EmailList: @Html.DropDownList("searchEmail", "None")
-        Name: @Html.TextBox("searchName")<br />
-        <input type="submit" value="seach" />
-    </p>
-}*@
+    {
+        <p>
+            EmailList: @Html.DropDownList("searchEmail", "None")
+            Name: @Html.TextBox("searchName")<br />
+            <input type="submit" value="seach" />
+        </p>
+    }*@
 @*
-异步执行ajax操作    
+    异步执行ajax操作
 *@
 
 @*@using (Ajax.BeginForm(
@@ -29,16 +29,16 @@
         <input type="submit" value="search" />
     }*@
 @*
-自写异步ajax请求    
+    自写异步ajax请求
 *@
 @Html.AntiForgeryToken();
 <form method="get" action="@Url.Action("Index")" data-movies-ajax="true" data-movies-targetId="#partialUser">
     @*<input type="search" name="searchName" />*@
-    <input type="search" name="searchName" 
+    <input type="search" name="searchName"
            data-movies-autocomplete="@Url.Action("AutoComplete")" />
     <input type="submit" value="search" />
 </form>
-@{ 
+@{
     var count = 10.01m;
     var date = DateTime.Now;
 }
@@ -49,46 +49,96 @@
     @date.ToShortDateString()
 </div>
 
-@Html.Partial("_partialUser",Model)
-@*<table class="table" style="width:80%;">
-    <tr>
-        <th>
-            Id
-        </th>
-        <th>
-            用户名
-        </th>
-        <th>
-            Email
-        </th>
-        <th></th>
-    </tr>
+<div class="inerer">
+    @*<p class="pt">hello</p>
+        <button class="h">隐藏</button>
+        <button class="s">显示</button>
+        <button class="hs">隐藏/显示</button>*@
+    @*<script src="~/scripts/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function () {
+                for (var i = 0; i < 5; i++) {
+                    $("<p>ttt</p>").appendTo(".inerer");
+                }
+                $("p").click(function () {
+                    $(this).hide(2000, function () {
+                        $(this).remove();
+                    });
+                });
+            });
+        </script>*@
 
-    @if (Model == null)
-    {
+    <div class="div1" style="background-color:aquamarine;width:50px;height:50px;float:left;"></div>
+    <div class="div2" style="background-color:aquamarine;width:50px;height:50px;float:left;"></div>
+    <div class="div3" style="background-color:aquamarine;width:50px;height:50px;float:left;"></div>
+    @*<button class="fin">淡入</button>
+        <button class="fout">淡出</button>
+        <button class="ftoggle">淡入/淡出</button>
+        <button class="fto">指定某一个透明度</button>*@
+
+    <button class="sdown">滑动</button>
+    <button class="sup">隐藏</button>
+    <button class="stoggle">滑动/隐藏</button>
+
+    <button class="reh">回调</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Html.Partial("_partialUser", Model)
+@*<table class="table" style="width:80%;">
         <tr>
-            <td colspan="4" class="text-center">暂无数据</td>
+            <th>
+                Id
+            </th>
+            <th>
+                用户名
+            </th>
+            <th>
+                Email
+            </th>
+            <th></th>
         </tr>
-    }
-    else
-    {
-        foreach (jikexueyuan.Models.AppUser user in Model)
+
+        @if (Model == null)
         {
             <tr>
-                <th>
-                    @user.Id
-                </th>
-                <th>
-                    @user.UserName
-                </th>
-                <th>
-                    @user.Email
-                </th>
+                <td colspan="4" class="text-center">暂无数据</td>
             </tr>
-            }
         }
-</table>*@
+        else
+        {
+            foreach (jikexueyuan.Models.AppUser user in Model)
+            {
+                <tr>
+                    <th>
+                        @user.Id
+                    </th>
+                    <th>
+                        @user.UserName
+                    </th>
+                    <th>
+                        @user.Email
+                    </th>
+                </tr>
+                }
+            }
+    </table>*@
 <p>
-    @Html.ActionLink("创建新账户", "Creat")
+    @Html.ActionLink("创建新账户", "Creat") | 
+    @Html.ActionLink("图片", "ImageShow")
 </p>
 

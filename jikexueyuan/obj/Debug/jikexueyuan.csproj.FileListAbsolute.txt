@@ -74,5 +74,8 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bi
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\zh-Hans\System.Web.Helpers.resources.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.Properties.Resources.resources
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.csproj.GenerateResource.Cache
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.csprojResolveAssemblyReference.cache
