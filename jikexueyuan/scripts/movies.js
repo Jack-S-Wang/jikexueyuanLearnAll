@@ -9,7 +9,6 @@ $.fn.myjq = function () {
 }
 
 
-
 $(function () {
 
     //$.myjq();
@@ -231,18 +230,18 @@ $(function () {
         })
     });
     
-    //$("#realcontent").load("/Identity/Login");
+    $("#realcontent").load("/Resources/hh.html");
     $("#tabsecond li").each(function (index) {
         $(this).click(function () {
             $("#tabsecond li.tabin").removeClass("tabin");
             $(this).addClass("tabin");
-            //if (index == 0) {
-            //    $("#realcontent").load("/Identity/Login");
-            //} else if (index == 1) {
-            //    $("#realcontent").load("/Identity/Creat");
-            //} else if (index == 2) {
-            //    $("#realcontent").load("/Identity/Login");
-            //}
+            if (index == 0) {
+                $("#realcontent").load("/Resources/hh.html");
+            } else if (index == 1) {
+                $("#realcontent").load("/Resources/hh.html h3");
+            } else if (index == 2) {
+                $("#realcontent").load("/Resources/hh.html");
+            }
         });
     });
 

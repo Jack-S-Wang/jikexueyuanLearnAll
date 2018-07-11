@@ -236,6 +236,7 @@
     <None Include="Resources\snake.jpg" />
     <None Include="Resources\student.jpg" />
     <None Include="Resources\企鹅.jpg" />
+    <Content Include="Resources\hh.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
@@ -256,6 +257,7 @@
     </Content>
     <Content Include="Views\Identity\Login.cshtml" />
     <Content Include="Views\Identity\Creat.cshtml" />
+    <Content Include="webText\网页设计导航模式.rar" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
