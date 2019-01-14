@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owin.host", "owin.host\owin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owin.ClassHost", "owin.ClassHost\owin.ClassHost.csproj", "{19D7F692-4B76-4C3C-BB87-87E6625A9FBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imageColorTrun", "imageColorTrun\imageColorTrun.csproj", "{6E6EC42B-C094-4A6E-A88E-AB450225AAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bootstrap.studt", "bootstrap.studt\bootstrap.studt.csproj", "{B64F3988-0C61-44A9-B4ED-5A36F55E7AA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{19D7F692-4B76-4C3C-BB87-87E6625A9FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19D7F692-4B76-4C3C-BB87-87E6625A9FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19D7F692-4B76-4C3C-BB87-87E6625A9FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6EC42B-C094-4A6E-A88E-AB450225AAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6EC42B-C094-4A6E-A88E-AB450225AAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6EC42B-C094-4A6E-A88E-AB450225AAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6EC42B-C094-4A6E-A88E-AB450225AAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64F3988-0C61-44A9-B4ED-5A36F55E7AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64F3988-0C61-44A9-B4ED-5A36F55E7AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64F3988-0C61-44A9-B4ED-5A36F55E7AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64F3988-0C61-44A9-B4ED-5A36F55E7AA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

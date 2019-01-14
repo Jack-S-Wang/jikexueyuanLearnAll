@@ -1,0 +1,8 @@
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\bin\Debug\imageColorTrun.exe.config
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\bin\Debug\imageColorTrun.exe
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\bin\Debug\imageColorTrun.pdb
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\obj\Debug\imageColorTrun.csprojResolveAssemblyReference.cache
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\obj\Debug\imageColorTrun.Properties.Resources.resources
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\obj\Debug\imageColorTrun.csproj.GenerateResource.Cache
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\obj\Debug\imageColorTrun.exe
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\imageColorTrun\obj\Debug\imageColorTrun.pdb

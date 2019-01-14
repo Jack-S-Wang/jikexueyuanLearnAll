@@ -78,4 +78,5 @@ C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\ob
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.csproj.GenerateResource.Cache
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.dll
 C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.pdb
-C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\obj\Debug\jikexueyuan.csprojResolveAssemblyReference.cache
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Less.dll
+C:\Users\DS-031\documents\visual studio 2015\Projects\jikexueyuan\jikexueyuan\bin\Less.pdb

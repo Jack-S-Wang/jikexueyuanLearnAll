@@ -23,7 +23,7 @@ namespace jikexueyuan.Infrastructure
         /// </summary>
         static AppIdentityDBContext()
         {
-            Database.SetInitializer(new IdentityDBInit());
+            System.Data.Entity.Database.SetInitializer(new IdentityDBInit());
         }
 
         /// <summary>
